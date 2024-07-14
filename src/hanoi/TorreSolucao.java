@@ -3,6 +3,7 @@ package hanoi;
 public class TorreSolucao {
     private int contador = 0; // Para rastrear a contagem de passos
     private Torre t;
+    public TorreSolucao(Torre t){this.t = t;}
 
     /**
      * Lógica para mover n discos da torre fonte para a torre destino.
@@ -22,17 +23,18 @@ public class TorreSolucao {
      * @param aux A torre auxiliar.
      */
 
-    public void soluçao(int altaTorre, int fonte, int destino, int aux) {
+    public void solucao(int altaTorre, int fonte,
+                        int destino, int aux) {
         if (altaTorre == 1) {
             t.move(fonte, destino);
             System.out.println("PASSO " + (++contador));
             t.printTorres();
         } else {
-            soluçao(altaTorre - 1, fonte, aux, destino);
+            solucao(altaTorre - 1, fonte, aux, destino);
             t.move(fonte, destino);
             System.out.println("Passo " + (++contador));
             t.printTorres();
-            soluçao(altaTorre - 1, aux, destino, fonte);
+            solucao(altaTorre - 1, aux, destino, fonte);
         }
     }
 }
