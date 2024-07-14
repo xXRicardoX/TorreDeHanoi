@@ -28,20 +28,20 @@ O projeto consiste em três classes principais:
 
 1. Clone o repositório:
 
-```bash
+```
 git clone https://github.com/seu-usuario/torres-de-hanoi.git
 cd torres-de-hanoi
 Compile as classes Java:
-bash
+
 
 javac hanoi/Torre.java hanoi/TorreSolucao.java hanoi/TorresDeHanoi.java
 Execute o programa:
-bash
+
 
 java hanoi.TorresDeHanoi
 Digite o número de discos quando solicitado e veja o processo de solução impresso no console.
 Exemplo
-bash
+
 
 Entrada de valor para o contador: 3
 |     ===     |
